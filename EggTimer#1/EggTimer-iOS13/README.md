@@ -1,2 +1,2 @@
-<img width="434" alt="01" src="https://user-images.githubusercontent.com/49156359/120066566-fb620880-c098-11eb-84da-a1edf276990d.png">
-<img width="434" alt="02" src="https://user-images.githubusercontent.com/49156359/120066572-0026bc80-c099-11eb-8c19-56728442ee28.png">
+<img width="368" alt="01" src="https://user-images.githubusercontent.com/49156359/121248189-f4bb6880-c8c4-11eb-8f19-5af458c18846.png">
+<img width="368" alt="Без названия" src="https://user-images.githubusercontent.com/49156359/121248212-f9801c80-c8c4-11eb-8b7b-70d402e79d91.png">
