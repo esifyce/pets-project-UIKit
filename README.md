@@ -1,3 +1,2 @@
-<img width="361" alt="WeatherApp2" src="https://user-images.githubusercontent.com/49156359/120851161-48167980-c59a-11eb-8ae6-f3a20a3ad49d.png">
-<img width="368" alt="03" src="https://user-images.githubusercontent.com/49156359/121232350-5246b980-c8b3-11eb-9e79-9332fc5dbf8b.png">
-<img width="361" alt="sketup" src="https://user-images.githubusercontent.com/49156359/121025882-72994a00-c7c7-11eb-9b53-b2dd38c3b26d.png">
+<img width="434" alt="01" src="https://user-images.githubusercontent.com/49156359/120066566-fb620880-c098-11eb-84da-a1edf276990d.png">
+<img width="434" alt="02" src="https://user-images.githubusercontent.com/49156359/120066572-0026bc80-c099-11eb-8c19-56728442ee28.png">
