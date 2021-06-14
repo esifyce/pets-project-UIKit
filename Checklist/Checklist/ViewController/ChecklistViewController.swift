@@ -9,49 +9,16 @@ import UIKit
 
 class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
     
-    var items = [ChecklistItem]()
+    var checklist: ChecklistData!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .never
         
-        loadChecklistItems()
-        
-        print(dataFilePath())
+       // print(dataFilePath())
+        title = checklist.name
     }
-    
-    // MARK: - Load&Save Func
-    func saveChecklistItems() {
-        
-        let encoder = PropertyListEncoder()
-        
-        do {
-            // кодирует массив items который можно записать в файл
-            let data = try encoder.encode(items)
-            // записываем данные в файл, используя путь к файлу
-            try data.write (to: dataFilePath(), options: Data.WritingOptions.atomic)
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
-    func loadChecklistItems() {
-        // помещаем результаты в path
-        let path = dataFilePath()
-        // пробуем выгрузить данные в новый объект
-        if let data = try? Data(contentsOf: path) {
-        // если файл Checklists.plist найден, вы загрузите всё в массив и создаем экземпляр декодера
-            let decoder = PropertyListDecoder()
-            do {
-                // загружаем сохранненые данные, первый передаваемый параметр decode
-                items = try decoder.decode([ChecklistItem].self, from: data)
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-    }
-    
     // MARK: - config Function
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
         let label = cell.viewWithTag(1001) as! UILabel
@@ -66,6 +33,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         
         let label = cell.viewWithTag(1000) as! UILabel
         label.text = item.text
+        //label.text = " \(item.itemID): \(item.text)"
     }
     
     // MARK: - Navigation
@@ -79,21 +47,21 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
             controller.delegate = self
             
             if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
-                controller.itemToEdit = items[indexPath.row]
+                controller.itemToEdit = checklist.items[indexPath.row]
             }
         }
     }
     
     // MARK: - Table View Data Source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return checklist.items.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
         
-        let item = items[indexPath.row]
+        let item = checklist.items[indexPath.row]
         
         configureText(for: cell, with: item)
         configureCheckmark(for: cell, with: item)
@@ -106,22 +74,22 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         
         if let cell = tableView.cellForRow(at: indexPath) {
         
-        let item = items[indexPath.row]
+            let item = checklist.items[indexPath.row]
         item.checked.toggle()
         
         configureCheckmark(for: cell, with: item)
     }
         tableView.deselectRow(at: indexPath, animated: true)
-        saveChecklistItems()
+     //   saveChecklistItems()
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-        items.remove(at: indexPath.row)
+        checklist.items.remove(at: indexPath.row)
         
         let indexPaths = [indexPath]
         tableView.deleteRows(at: indexPaths, with: .automatic)
-        saveChecklistItems()
+     //   saveChecklistItems()
     }
     
     // MARK: - Delegate
@@ -130,27 +98,27 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     }
     
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishAdding item: ChecklistItem) {
-        let newRowIndex = items.count
-        items.append(item)
+        let newRowIndex = checklist.items.count
+        checklist.items.append(item)
         
         let indexPath = IndexPath(row: newRowIndex, section: 0)
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
         
         navigationController?.popViewController(animated: true)
-        saveChecklistItems()
+  //      saveChecklistItems()
     }
     
     func  addItemViewController (_ контроллер: ItemDetailViewController, didFinishEdititng item: ChecklistItem) {
         
-        if let index = items.firstIndex(of: item) {
+        if let index = checklist.items.firstIndex(of: item) {
             let indexPath = IndexPath(row: index, section: 0)
             if let cell = tableView.cellForRow(at: indexPath) {
                 configureText(for: cell, with: item)
             }
         }
         navigationController?.popViewController(animated: true)
-        saveChecklistItems()
+     //   saveChecklistItems()
     }
     
     // MARK: - Путь к папке сохранения
