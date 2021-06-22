@@ -1,5 +1,7 @@
 
-Uploading Simulator Screen Recording - iPhone 12 Pro - 2021-06-22 at 14.23.21.mp4…
+
+https://user-images.githubusercontent.com/49156359/122895252-c2e8de00-d369-11eb-8e92-ecac98186ae7.mp4
+
 
 <img width="368" alt="l6" src="https://user-images.githubusercontent.com/49156359/122894957-7e5d4280-d369-11eb-936f-bbad61e29d74.png">
 <img width="368" alt="111" src="https://user-images.githubusercontent.com/49156359/122894971-8321f680-d369-11eb-8070-bf9eab78fd3d.png">
