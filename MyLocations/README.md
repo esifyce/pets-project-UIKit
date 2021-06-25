@@ -1,3 +1,5 @@
+<img width="368" alt="wa2" src="https://user-images.githubusercontent.com/49156359/123420636-9b9a4700-d5dd-11eb-8f99-db4085d7e884.png">
+<img width="368" alt="Walkthroug1" src="https://user-images.githubusercontent.com/49156359/123420645-9fc66480-d5dd-11eb-8c43-e6145e4a8d05.png">
 
 
 https://user-images.githubusercontent.com/49156359/122895252-c2e8de00-d369-11eb-8e92-ecac98186ae7.mp4
