@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  StoreSearch
+
+  Created by Sabir Myrzaev on 03.07.2021.
+  
+*/
+
+// меняет имя проекта
+CFBundleDisplayName = "StoreZoeker";
