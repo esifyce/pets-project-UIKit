@@ -1,5 +1,6 @@
 <img width="368" alt="Walkthroug1" src="https://user-images.githubusercontent.com/49156359/123420645-9fc66480-d5dd-11eb-8c43-e6145e4a8d05.png">
 <img width="368" alt="122895012-8a490480-d369-11eb-91da-304d614513f5" src="https://user-images.githubusercontent.com/49156359/122895429-ea3fab00-d369-11eb-9bb2-d9383d02d580.png">
+<img width="362" alt="Local notif" src="https://user-images.githubusercontent.com/49156359/125071279-e71f1b80-e0da-11eb-8a7b-b5af8669637e.png">
 <img width="361" alt="WeatherApp2" src="https://user-images.githubusercontent.com/49156359/120851161-48167980-c59a-11eb-8ae6-f3a20a3ad49d.png">
 <img width="368" alt="Без названия" src="https://user-images.githubusercontent.com/49156359/121242895-e5392100-c8be-11eb-9ba5-785324290af6.png">
 <img width="368" alt="10" src="https://user-images.githubusercontent.com/49156359/121949375-342cfd80-cd7a-11eb-9427-dd6762b3f006.png">
